@@ -10,7 +10,7 @@ import GeometricFusionTemplate from "@/components/templates/geometric-fusion-tem
 import AbstractMosaicTemplate from "@/components/templates/abstract-mosaic-template"
 import NeonGridTemplate from "@/components/templates/neon-grid-template"
 import CubismFlowTemplate from "@/components/templates/cubism-flow-template"
-import TemplateSelector from "@/components/template-selector"
+// import TemplateSelector from "@/components/template-selector"
 
 // Sample resume data
 const sampleResumeData = {
@@ -37,12 +37,12 @@ const sampleResumeData = {
   ],
   skills: [
     {
-      name: "Frontend",
-      skills: ["React", "Vue.js", "HTML5", "CSS3", "JavaScript"],
+      name: "Astroinformatics and Data Science",
+      skills: ["Python", "PyTorch", "SQL, astroquery", "Jupyter Lab", "RStudio/RMD","MongoDB",],
     },
     {
-      name: "Backend",
-      skills: ["Node.js", "Express", "Python", "Django", "PostgreSQL"],
+      name: "Machine Learning",
+      skills: ["XGBoost/Decision Trees","MLP and Dropout","CNN",],
     },
   ],
   experience: [
@@ -84,51 +84,7 @@ export default function Home() {
       name: "Neon Grid",
       description: "Cyberpunk-inspired design with neon grid lines and glowing elements",
     },
-    // {
-    //   id: "cubism-flow",
-    //   name: "Cubism Flow",
-    //   description: "Overlapping geometric shapes with isometric elements and flowing animations",
-    // },
-    // {
-    //   id: "geometric-fusion",
-    //   name: "Geometric Fusion",
-    //   description: "Modern design with dynamic polygons and bold colors",
-    // },
-    // {
-    //   id: "abstract-mosaic",
-    //   name: "Abstract Mosaic",
-    //   description: "Fluid shapes and vibrant color transitions",
-    // },
-    // {
-    //   id: "bioluminescent-abyss",
-    //   name: "Bioluminescent Abyss",
-    //   description: "Dark depths with glowing neon elements and particle animations",
-    // },
-    // {
-    //   id: "tropical-lagoon",
-    //   name: "Tropical Lagoon",
-    //   description: "Vibrant turquoise with flowing water animations and tropical accents",
-    // },
-    // {
-    //   id: "ocean-sunset",
-    //   name: "Ocean Sunset",
-    //   description: "Warm sunset gradients with gentle wave animations",
-    // },
-    // {
-    //   id: "deep-ocean",
-    //   name: "Deep Ocean",
-    //   description: "Dark blues with bioluminescent accents",
-    // },
-    // {
-    //   id: "coral-reef",
-    //   name: "Coral Reef",
-    //   description: "Vibrant blues with coral accents",
-    // },
-    // {
-    //   id: "coastal-waters",
-    //   name: "Coastal Waters",
-    //   description: "Light blues with sandy/beachy elements",
-    // },
+  
   ]
 
   const renderTemplate = () => {
@@ -158,14 +114,14 @@ export default function Home() {
     }
   }
 
-  return (
-    <main className="min-h-screen">
-      <TemplateSelector
-        templates={templates}
-        selectedTemplate={selectedTemplate}
-        onSelectTemplate={setSelectedTemplate}
-      />
-      <div className="mt-8 pt-4">{renderTemplate()}</div>
-    </main>
-  )
+  // return (
+  //   <main className="min-h-screen">
+  //     <TemplateSelector
+  //       templates={templates}
+  //       selectedTemplate={selectedTemplate}
+  //       onSelectTemplate={setSelectedTemplate}
+  //     />
+  //     <div className="mt-8 pt-4">{renderTemplate()}</div>
+  //   </main>
+  // )
 }
