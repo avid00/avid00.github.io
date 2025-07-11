@@ -15,24 +15,24 @@ import TemplateSelector from "@/components/template-selector"
 // Sample resume data
 const sampleResumeData = {
   personal: {
-    name: "Alex Johnson",
-    title: "Full Stack Developer",
-    email: "alex@example.com",
-    github: "https://github.com/alexj",
-    linkedin: "https://linkedin.com/in/alexj",
+    name: "Amisha Das",
+    title: "Passionate Data Scientist, Astroinformatician and Developer",
+    email: "amishav.das@gmail.com",
+    github: "https://github.com/avid00",
+    linkedin: "https://linkedin.com/amisha-victoria-das",
   },
   projects: [
     {
-      name: "E-commerce Platform",
-      description: "Built a full-stack e-commerce platform using React, Node.js, and MongoDB.",
-      deployedLink: "https://ecommerce.example.com",
-      githubUrl: "https://github.com/alexj/ecommerce",
+      name: "xxxxxxxxxxxxxx",
+      description: "xxxxxxxxxxxxxx",
+      deployedLink: "xxxxxxxxxxxxxx",
+      githubUrl: "xxxxxxxxxxxxxx",
     },
-    {
-      name: "Weather App",
-      description: "Developed a weather application using React and OpenWeatherMap API.",
-      deployedLink: "https://weather.example.com",
-      githubUrl: "https://github.com/alexj/weather-app",
+     {
+      name: "xxxxxxxxxxxxxx",
+      description: "xxxxxxxxxxxxxx",
+      deployedLink: "xxxxxxxxxxxxxx",
+      githubUrl: "xxxxxxxxxxxxxx",
     },
   ],
   skills: [
@@ -47,27 +47,29 @@ const sampleResumeData = {
   ],
   experience: [
     {
-      position: "Senior Developer",
-      company: "Tech Innovations Inc.",
-      startDate: "Jan 2020",
-      endDate: "Present",
-      description: "Lead developer for multiple high-impact projects.",
+      position: "1xxxxxxxxx",
+      company: "xxxxxxxxx",
+      startDate: "xxxxxxxxx",
+      endDate: "xxxxxxxxx",
+      description: "xxxxxxxxx",
       bulletPoints: [
-        "Architected and implemented scalable solutions for enterprise clients",
-        "Mentored junior developers and conducted code reviews",
-        "Improved system performance by 40% through optimizations",
+        "xxxxxxxxx",
+        "xxxxxxxxx",
+        "xxxxxxxxx",
+
       ],
     },
     {
-      position: "Full Stack Developer",
-      company: "StartUp Solutions",
-      startDate: "Jun 2017",
-      endDate: "Dec 2019",
-      description: "Full stack developer working on various client projects.",
+      position: "1xxxxxxxxx",
+      company: "xxxxxxxxx",
+      startDate: "xxxxxxxxx",
+      endDate: "xxxxxxxxx",
+      description: "xxxxxxxxx",
       bulletPoints: [
-        "Developed and maintained client websites using React and Node.js",
-        "Implemented responsive designs and ensured cross-browser compatibility",
-        "Integrated third-party APIs and services into applications",
+        "xxxxxxxxx",
+        "xxxxxxxxx",
+        "xxxxxxxxx",
+
       ],
     },
   ],
@@ -82,51 +84,51 @@ export default function Home() {
       name: "Neon Grid",
       description: "Cyberpunk-inspired design with neon grid lines and glowing elements",
     },
-    {
-      id: "cubism-flow",
-      name: "Cubism Flow",
-      description: "Overlapping geometric shapes with isometric elements and flowing animations",
-    },
-    {
-      id: "geometric-fusion",
-      name: "Geometric Fusion",
-      description: "Modern design with dynamic polygons and bold colors",
-    },
-    {
-      id: "abstract-mosaic",
-      name: "Abstract Mosaic",
-      description: "Fluid shapes and vibrant color transitions",
-    },
-    {
-      id: "bioluminescent-abyss",
-      name: "Bioluminescent Abyss",
-      description: "Dark depths with glowing neon elements and particle animations",
-    },
-    {
-      id: "tropical-lagoon",
-      name: "Tropical Lagoon",
-      description: "Vibrant turquoise with flowing water animations and tropical accents",
-    },
-    {
-      id: "ocean-sunset",
-      name: "Ocean Sunset",
-      description: "Warm sunset gradients with gentle wave animations",
-    },
-    {
-      id: "deep-ocean",
-      name: "Deep Ocean",
-      description: "Dark blues with bioluminescent accents",
-    },
-    {
-      id: "coral-reef",
-      name: "Coral Reef",
-      description: "Vibrant blues with coral accents",
-    },
-    {
-      id: "coastal-waters",
-      name: "Coastal Waters",
-      description: "Light blues with sandy/beachy elements",
-    },
+    // {
+    //   id: "cubism-flow",
+    //   name: "Cubism Flow",
+    //   description: "Overlapping geometric shapes with isometric elements and flowing animations",
+    // },
+    // {
+    //   id: "geometric-fusion",
+    //   name: "Geometric Fusion",
+    //   description: "Modern design with dynamic polygons and bold colors",
+    // },
+    // {
+    //   id: "abstract-mosaic",
+    //   name: "Abstract Mosaic",
+    //   description: "Fluid shapes and vibrant color transitions",
+    // },
+    // {
+    //   id: "bioluminescent-abyss",
+    //   name: "Bioluminescent Abyss",
+    //   description: "Dark depths with glowing neon elements and particle animations",
+    // },
+    // {
+    //   id: "tropical-lagoon",
+    //   name: "Tropical Lagoon",
+    //   description: "Vibrant turquoise with flowing water animations and tropical accents",
+    // },
+    // {
+    //   id: "ocean-sunset",
+    //   name: "Ocean Sunset",
+    //   description: "Warm sunset gradients with gentle wave animations",
+    // },
+    // {
+    //   id: "deep-ocean",
+    //   name: "Deep Ocean",
+    //   description: "Dark blues with bioluminescent accents",
+    // },
+    // {
+    //   id: "coral-reef",
+    //   name: "Coral Reef",
+    //   description: "Vibrant blues with coral accents",
+    // },
+    // {
+    //   id: "coastal-waters",
+    //   name: "Coastal Waters",
+    //   description: "Light blues with sandy/beachy elements",
+    // },
   ]
 
   const renderTemplate = () => {
