@@ -10,7 +10,7 @@ import GeometricFusionTemplate from "@/components/templates/geometric-fusion-tem
 import AbstractMosaicTemplate from "@/components/templates/abstract-mosaic-template"
 import NeonGridTemplate from "@/components/templates/neon-grid-template"
 import CubismFlowTemplate from "@/components/templates/cubism-flow-template"
-// import TemplateSelector from "@/components/template-selector"
+import TemplateSelector from "@/components/template-selector"
 
 // Sample resume data
 const sampleResumeData = {
@@ -114,14 +114,9 @@ export default function Home() {
     }
   }
 
-  // return (
-  //   <main className="min-h-screen">
-  //     <TemplateSelector
-  //       templates={templates}
-  //       selectedTemplate={selectedTemplate}
-  //       onSelectTemplate={setSelectedTemplate}
-  //     />
-  //     <div className="mt-8 pt-4">{renderTemplate()}</div>
-  //   </main>
-  // )
+   return (
+    <main className="min-h-screen">
+      <NeonGridTemplate data={sampleResumeData} />
+    </main>
+  )
 }
