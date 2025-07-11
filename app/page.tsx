@@ -19,7 +19,7 @@ const sampleResumeData = {
     title: "Passionate Data Scientist, Astroinformatician and Developer",
     email: "amishav.das@gmail.com",
     github: "https://github.com/avid00",
-    linkedin: "https://linkedin.com/amisha-victoria-das",
+    linkedin: "https://linkedin.com/in/amisha-victoria-das",
   },
   projects: [
     {
