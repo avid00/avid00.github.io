@@ -1,15 +1,15 @@
 "use client"
 import { useState } from "react"
-import DeepOceanTemplate from "@/components/templates/deep-ocean-template"
-import CoralReefTemplate from "@/components/templates/coral-reef-template"
-import CoastalWatersTemplate from "@/components/templates/coastal-waters-template"
-import BioluminescentAbyssTemplate from "@/components/templates/bioluminescent-abyss-template"
-import TropicalLagoonTemplate from "@/components/templates/tropical-lagoon-template"
-import OceanSunsetTemplate from "@/components/templates/ocean-sunset-template"
-import GeometricFusionTemplate from "@/components/templates/geometric-fusion-template"
-import AbstractMosaicTemplate from "@/components/templates/abstract-mosaic-template"
+// import DeepOceanTemplate from "@/components/templates/deep-ocean-template"
+// import CoralReefTemplate from "@/components/templates/coral-reef-template"
+// import CoastalWatersTemplate from "@/components/templates/coastal-waters-template"
+// import BioluminescentAbyssTemplate from "@/components/templates/bioluminescent-abyss-template"
+// import TropicalLagoonTemplate from "@/components/templates/tropical-lagoon-template"
+// import OceanSunsetTemplate from "@/components/templates/ocean-sunset-template"
+// import GeometricFusionTemplate from "@/components/templates/geometric-fusion-template"
+// import AbstractMosaicTemplate from "@/components/templates/abstract-mosaic-template"
 import NeonGridTemplate from "@/components/templates/neon-grid-template"
-import CubismFlowTemplate from "@/components/templates/cubism-flow-template"
+// import CubismFlowTemplate from "@/components/templates/cubism-flow-template"
 import TemplateSelector from "@/components/template-selector"
 
 // Sample resume data
@@ -20,19 +20,20 @@ const sampleResumeData = {
     email: "amishav.das@gmail.com",
     github: "https://github.com/avid00",
     linkedin: "https://linkedin.com/in/amisha-victoria-das",
+    resume: "resume"
   },
   projects: [
     {
-      name: "xxxxxxxxxxxxxx",
+      name: "Roleplay Chatbot",
       description: "xxxxxxxxxxxxxx",
       deployedLink: "xxxxxxxxxxxxxx",
       githubUrl: "xxxxxxxxxxxxxx",
     },
      {
-      name: "xxxxxxxxxxxxxx",
+      name: "Plasmalead",
       description: "xxxxxxxxxxxxxx",
       deployedLink: "xxxxxxxxxxxxxx",
-      githubUrl: "xxxxxxxxxxxxxx",
+      githubUrl: "https://github.com/Ishj21/coviguard",
     },
   ],
   skills: [
@@ -89,26 +90,26 @@ export default function Home() {
 
   const renderTemplate = () => {
     switch (selectedTemplate) {
-      case "deep-ocean":
-        return <DeepOceanTemplate data={sampleResumeData} />
-      case "coral-reef":
-        return <CoralReefTemplate data={sampleResumeData} />
-      case "coastal-waters":
-        return <CoastalWatersTemplate data={sampleResumeData} />
-      case "bioluminescent-abyss":
-        return <BioluminescentAbyssTemplate data={sampleResumeData} />
-      case "tropical-lagoon":
-        return <TropicalLagoonTemplate data={sampleResumeData} />
-      case "ocean-sunset":
-        return <OceanSunsetTemplate data={sampleResumeData} />
-      case "geometric-fusion":
-        return <GeometricFusionTemplate data={sampleResumeData} />
-      case "abstract-mosaic":
-        return <AbstractMosaicTemplate data={sampleResumeData} />
+      // case "deep-ocean":
+      //   return <DeepOceanTemplate data={sampleResumeData} />
+      // case "coral-reef":
+      //   return <CoralReefTemplate data={sampleResumeData} />
+      // case "coastal-waters":
+      //   return <CoastalWatersTemplate data={sampleResumeData} />
+      // case "bioluminescent-abyss":
+      //   return <BioluminescentAbyssTemplate data={sampleResumeData} />
+      // case "tropical-lagoon":
+      //   return <TropicalLagoonTemplate data={sampleResumeData} />
+      // case "ocean-sunset":
+      //   return <OceanSunsetTemplate data={sampleResumeData} />
+      // case "geometric-fusion":
+      //   return <GeometricFusionTemplate data={sampleResumeData} />
+      // case "abstract-mosaic":
+      //   return <AbstractMosaicTemplate data={sampleResumeData} />
       case "neon-grid":
         return <NeonGridTemplate data={sampleResumeData} />
-      case "cubism-flow":
-        return <CubismFlowTemplate data={sampleResumeData} />
+      // case "cubism-flow":
+      //   return <CubismFlowTemplate data={sampleResumeData} />
       default:
         return <NeonGridTemplate data={sampleResumeData} />
     }
