@@ -1,5 +1,5 @@
 "use client"
-import { Github, Linkedin, Mail, ExternalLink, Cpu, Code, Terminal, Zap } from "lucide-react"
+import { Github, Linkedin, Mail, ExternalLink, Cpu, Code, Terminal, Zap, FileText } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 
 interface ResumeData {
@@ -9,6 +9,7 @@ interface ResumeData {
     email: string
     github: string
     linkedin: string
+    resume: string
   }
   projects: {
     name: string
@@ -219,6 +220,16 @@ export default function NeonGridTemplate({ data }: NeonGridTemplateProps) {
               <Linkedin size={18} className="text-cyan-400" />
               <span className="text-cyan-100 group-hover:text-cyan-300 transition-colors duration-300">LinkedIn</span>
             </a>
+            <a
+              href={data.personal.resume}
+              download="amisha_resume.pdf"
+              // target="_blank"
+              // rel="noopener noreferrer"
+              className="group flex items-center gap-2 px-4 py-2 bg-black border border-cyan-500 hover:bg-cyan-900/30 transition-colors duration-300"
+            >
+              <FileText size={18} className="text-cyan-400" />
+              <span className="text-cyan-100 group-hover:text-cyan-300 transition-colors duration-300">Download Resume</span>
+            </a>
           </div>
 
           <div className="animate-bounce">
@@ -284,7 +295,7 @@ export default function NeonGridTemplate({ data }: NeonGridTemplateProps) {
               <div className="ml-4 h-px flex-grow bg-gradient-to-r from-fuchsia-500 to-transparent"></div>
             </div>
 
-            <div className="space-y-16">
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-10">
               {data.projects.map((project, index) => (
                 <div
                   key={index}

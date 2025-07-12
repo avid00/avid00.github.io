@@ -20,7 +20,7 @@ const sampleResumeData = {
     email: "amishav.das@gmail.com",
     github: "https://github.com/avid00",
     linkedin: "https://linkedin.com/in/amisha-victoria-das",
-    resume: "resume"
+    resume: "/amisha_resume.pdf"
   },
   projects: [
     {
