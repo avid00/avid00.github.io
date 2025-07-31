@@ -33,9 +33,13 @@ interface ResumeData {
 
 interface NeonGridTemplateProps {
   data: ResumeData
+ only?: "projects" | "skills" | "experience" | null
 }
 
-export default function NeonGridTemplate({ data }: NeonGridTemplateProps) {
+export default function NeonGridTemplate({ data, only = null }: NeonGridTemplateProps) {
+
+
+// export default function NeonGridTemplate({ data }: NeonGridTemplateProps) {
   const gridCanvasRef = useRef<HTMLCanvasElement>(null)
   const [scrollY, setScrollY] = useState(0)
   const [activeSection, setActiveSection] = useState<string | null>(null)
@@ -174,6 +178,7 @@ export default function NeonGridTemplate({ data }: NeonGridTemplateProps) {
       </nav>
 
       {/* Header */}
+      {!only && (
       <header id="header" className="section-marker relative pt-32 px-6 z-10 min-h-screen flex items-center">
         <div className="max-w-6xl mx-auto w-full">
           <div className="glitch-container relative mb-4 inline-block">
@@ -243,9 +248,12 @@ export default function NeonGridTemplate({ data }: NeonGridTemplateProps) {
           </div>
         </div>
       </header>
+      )}
+
 
       <main className="relative z-10">
         {/* Skills Section */}
+        {(only === null || only === "skills") && (
         <section id="skills" className="section-marker relative px-6 py-32 z-10">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center mb-16">
@@ -285,8 +293,10 @@ export default function NeonGridTemplate({ data }: NeonGridTemplateProps) {
             </div>
           </div>
         </section>
+        )}
 
         {/* Projects Section */}
+        {(only === null || only === "projects") &&(
         <section id="projects" className="section-marker relative px-6 py-32 z-10">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center mb-16">
@@ -295,7 +305,7 @@ export default function NeonGridTemplate({ data }: NeonGridTemplateProps) {
               <div className="ml-4 h-px flex-grow bg-gradient-to-r from-fuchsia-500 to-transparent"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-1 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
               {data.projects.map((project, index) => (
                 <div
                   key={index}
@@ -336,8 +346,10 @@ export default function NeonGridTemplate({ data }: NeonGridTemplateProps) {
             </div>
           </div>
         </section>
+        )}
 
         {/* Experience Section */}
+        {(only === null || only === "skills") && (
         <section id="experience" className="section-marker relative px-6 py-32 z-10">
           <div className="max-w-6xl mx-auto">
             <div className="flex items-center mb-16">
@@ -397,6 +409,7 @@ export default function NeonGridTemplate({ data }: NeonGridTemplateProps) {
             </div>
           </div>
         </section>
+        )}
       </main>
 
       <style jsx global>{`

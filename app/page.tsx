@@ -8,9 +8,10 @@ import { useState } from "react"
 // import OceanSunsetTemplate from "@/components/templates/ocean-sunset-template"
 // import GeometricFusionTemplate from "@/components/templates/geometric-fusion-template"
 // import AbstractMosaicTemplate from "@/components/templates/abstract-mosaic-template"
-import NeonGridTemplate from "@/components/templates/neon-grid-template"
+import NeonGridTemplate from "@/components/pages/main"
+
 // import CubismFlowTemplate from "@/components/templates/cubism-flow-template"
-import TemplateSelector from "@/components/template-selector"
+// import TemplateSelector from "@/components/template-selector"
 
 // Sample resume data
 const sampleResumeData = {
@@ -24,6 +25,15 @@ const sampleResumeData = {
   },
   projects: [
     {
+      name: "Data Dashboards and Reports",
+      //shiny dashboard for earth quake
+      // 2 RMD Reporting
+      // tableau reports
+      description: "xxxxxxxxxxxxxx",
+      deployedLink: "xxxxxxxxxxxxxx",
+      githubUrl: "xxxxxxxxxxxxxx",
+    },
+    {
       name: "Roleplay Chatbot",
       description: "xxxxxxxxxxxxxx",
       deployedLink: "xxxxxxxxxxxxxx",
@@ -32,8 +42,28 @@ const sampleResumeData = {
      {
       name: "Plasmalead",
       description: "xxxxxxxxxxxxxx",
+      //plasmalead video
       deployedLink: "xxxxxxxxxxxxxx",
       githubUrl: "https://github.com/Ishj21/coviguard",
+    },
+    {
+      name: "Gametrax",
+      description: "xxxxxxxxxxxxxx (add link to thesis)",
+      //demo + thesis
+      deployedLink: "xxxxxxxxxxxxxx",
+      githubUrl: "https://github.com/avid00/Gametrax/tree/second",
+    },
+    {
+      name: "EDHREC to Archidekt Python Script",
+      description: "Converts any EDHREC deck JSON into a clean card list (.txt) for importing into Archidekt (or really any other deck-building platform).",
+      deployedLink: "xxxxxxxxxxxxxx",
+      githubUrl: "https://github.com/avid00/edhrec-to-archidekt/tree/main",
+    },
+     {
+      name: "Master's Thesis:",
+      description: "Converts any EDHREC deck JSON into a clean card list (.txt) for importing into Archidekt (or really any other deck-building platform).",
+      deployedLink: "xxxxxxxxxxxxxx",
+      githubUrl: "https://github.com/avid00/edhrec-to-archidekt/tree/main",
     },
   ],
   skills: [
@@ -90,22 +120,7 @@ export default function Home() {
 
   const renderTemplate = () => {
     switch (selectedTemplate) {
-      // case "deep-ocean":
-      //   return <DeepOceanTemplate data={sampleResumeData} />
-      // case "coral-reef":
-      //   return <CoralReefTemplate data={sampleResumeData} />
-      // case "coastal-waters":
-      //   return <CoastalWatersTemplate data={sampleResumeData} />
-      // case "bioluminescent-abyss":
-      //   return <BioluminescentAbyssTemplate data={sampleResumeData} />
-      // case "tropical-lagoon":
-      //   return <TropicalLagoonTemplate data={sampleResumeData} />
-      // case "ocean-sunset":
-      //   return <OceanSunsetTemplate data={sampleResumeData} />
-      // case "geometric-fusion":
-      //   return <GeometricFusionTemplate data={sampleResumeData} />
-      // case "abstract-mosaic":
-      //   return <AbstractMosaicTemplate data={sampleResumeData} />
+  
       case "neon-grid":
         return <NeonGridTemplate data={sampleResumeData} />
       // case "cubism-flow":
