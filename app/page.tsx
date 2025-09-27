@@ -1,19 +1,9 @@
 "use client"
 import { useState } from "react"
-// import DeepOceanTemplate from "@/components/templates/deep-ocean-template"
-// import CoralReefTemplate from "@/components/templates/coral-reef-template"
-// import CoastalWatersTemplate from "@/components/templates/coastal-waters-template"
-// import BioluminescentAbyssTemplate from "@/components/templates/bioluminescent-abyss-template"
-// import TropicalLagoonTemplate from "@/components/templates/tropical-lagoon-template"
-// import OceanSunsetTemplate from "@/components/templates/ocean-sunset-template"
-// import GeometricFusionTemplate from "@/components/templates/geometric-fusion-template"
-// import AbstractMosaicTemplate from "@/components/templates/abstract-mosaic-template"
 import NeonGridTemplate from "@/components/pages/main"
+import PdfModal from "@/components/pdf-viewer"
 
-// import CubismFlowTemplate from "@/components/templates/cubism-flow-template"
-// import TemplateSelector from "@/components/template-selector"
 
-// Sample resume data
 const sampleResumeData = {
   personal: {
     name: "Amisha Das",
@@ -28,7 +18,13 @@ const sampleResumeData = {
       name: "Data Dashboards and Reports",
       //shiny dashboard for earth quake
       // 2 RMD Reporting
-      // tableau reports
+      // report: "As Above So Below: How NASA’s Space Technology Saved Millions of Lives",
+      // report: "Growth on Paper, Loss on the Ground: Crops, Global Warming, and Farmer Incomes",
+      reports: [
+    { title: "As Above So Below: How NASA’s Space Technology Saved Millions of Lives", href: "/reports/nasa.pdf" },
+    { title: "Growth on Paper, Loss on the Ground: Crops, Global Warming, and Farmer Incomes", href: "/reports/wheat.pdf" },
+
+  ],
       description: "xxxxxxxxxxxxxx",
       deployedLink: "xxxxxxxxxxxxxx",
       githubUrl: "xxxxxxxxxxxxxx",
@@ -69,11 +65,11 @@ const sampleResumeData = {
   skills: [
     {
       name: "Astroinformatics and Data Science",
-      skills: ["Python", "PyTorch", "SQL, astroquery", "Jupyter Lab", "RStudio/RMD","MongoDB",],
+      skills: ["Python", "PyTorch", "Statistics", "SQL, astroquery", "Jupyter Lab", "RStudio/RMD","MongoDB",],
     },
     {
       name: "Machine Learning",
-      skills: ["XGBoost/Decision Trees","MLP and Dropout","CNN",],
+      skills: ["XGBoost/Decision Trees","MLP and MC-Dropout","CNN","\LLM"],
     },
   ],
   experience: [
@@ -123,8 +119,6 @@ export default function Home() {
   
       case "neon-grid":
         return <NeonGridTemplate data={sampleResumeData} />
-      // case "cubism-flow":
-      //   return <CubismFlowTemplate data={sampleResumeData} />
       default:
         return <NeonGridTemplate data={sampleResumeData} />
     }
