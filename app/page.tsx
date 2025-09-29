@@ -15,19 +15,34 @@ const sampleResumeData = {
   },
   projects: [
     {
-      name: "Data Dashboards and Reports",
-      //shiny dashboard for earth quake
-      // 2 RMD Reporting
-      // report: "As Above So Below: How NASA’s Space Technology Saved Millions of Lives",
-      // report: "Growth on Paper, Loss on the Ground: Crops, Global Warming, and Farmer Incomes",
-      reports: [
-    { title: "As Above So Below: How NASA’s Space Technology Saved Millions of Lives", href: "/reports/nasa.pdf" },
-    { title: "Growth on Paper, Loss on the Ground: Crops, Global Warming, and Farmer Incomes", href: "/reports/wheat.pdf" },
-
+      name: "Data Dashboards",
+            reports: [
+      { title: "1. Insights Into Earthquakes Data", href: "https://amishadas.shinyapps.io/quakes-data-insightful-plots/" },
+    { title: "2. Cool FIFA Facts ", href: "https://public.tableau.com/views/FIFAPROJECT_16769275033780/FIFAReportforFans?:language=en-US&:sid=&:redirect=auth&showOnboarding=true&:display_count=n&:origin=viz_share_link" },
+    { title: "3. Employee Attrition Insights", href: "  https://public.tableau.com/views/AttritionProject_16754448584050/AttritionatXYZ?:language=en-US&:sid=&:redirect=auth&showOnboarding=true&:display_count=n&:origin=viz_share_link" },
+    { title: "4. Spectroscopy Lab", href: "https://amishadas.shinyapps.io/spectroscopy_lab/" },
+    // { title: "5. Spectroscopy Lab", href: "https://amishadas.shinyapps.io/spectroscopy_lab/" },
   ],
-      description: "xxxxxxxxxxxxxx",
+      description: "Data Analysis Dashboards | Tableau, R/RStudio, Shiny",
       deployedLink: "xxxxxxxxxxxxxx",
       githubUrl: "xxxxxxxxxxxxxx",
+    },
+    {
+      name: "Data Reports",
+            reports: [
+    { title: "1. As Above So Below: How NASA’s Space Technology Saved Millions of Lives", href: "/reports/RMD/nasa.pdf" },
+    { title: "2. Growth on Paper, Loss on the Ground: Crops, Global Warming, and Farmer Incomes", href: "/reports/RMD/wheat.pdf" },
+  ],
+      description: "Reports | R/Rstudio, LaTeX",
+      deployedLink: "xxxxxxxxxxxxxx",
+      githubUrl: "xxxxxxxxxxxxxx",
+    },
+     {
+      name: "Plasmalead",
+      description: "xxxxxxxxxxxxxx",
+      //plasmalead video
+      deployedLink: "xxxxxxxxxxxxxx",
+      githubUrl: "https://github.com/Ishj21/coviguard",
     },
     {
       name: "Roleplay Chatbot",
@@ -46,6 +61,9 @@ const sampleResumeData = {
       name: "Gametrax",
       description: "xxxxxxxxxxxxxx (add link to thesis)",
       //demo + thesis
+      reports: [
+    { title: "View Video", href: "/reports/RMD/nasa.pdf" },
+  ],
       deployedLink: "xxxxxxxxxxxxxx",
       githubUrl: "https://github.com/avid00/Gametrax/tree/second",
     },
@@ -69,23 +87,10 @@ const sampleResumeData = {
     },
     {
       name: "Machine Learning",
-      skills: ["XGBoost/Decision Trees","MLP and MC-Dropout","CNN","\LLM"],
+      skills: ["XGBoost/Decision Trees","MLP and MC-Dropout","CNN","LLM"],
     },
   ],
   experience: [
-    {
-      position: "1xxxxxxxxx",
-      company: "xxxxxxxxx",
-      startDate: "xxxxxxxxx",
-      endDate: "xxxxxxxxx",
-      description: "xxxxxxxxx",
-      bulletPoints: [
-        "xxxxxxxxx",
-        "xxxxxxxxx",
-        "xxxxxxxxx",
-
-      ],
-    },
     {
       position: "1xxxxxxxxx",
       company: "xxxxxxxxx",

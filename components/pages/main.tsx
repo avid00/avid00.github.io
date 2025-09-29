@@ -1,6 +1,10 @@
 "use client"
 import { Github, Linkedin, Mail, ExternalLink, Cpu, Code, Terminal, Zap, FileText } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
+import PdfModal from "@/components/pdf-viewer"
+
+
+
 
 interface ResumeData {
   personal: {
@@ -12,11 +16,13 @@ interface ResumeData {
     resume: string
   }
   projects: {
-    name: string
-    description: string
-    deployedLink: string
-    githubUrl: string
-  }[]
+  name: string
+  description: string
+  deployedLink: string
+  githubUrl: string
+  reports?: { title: string; href: string }[]   
+}[]
+
   skills: {
     name: string
     skills: string[]
@@ -296,57 +302,84 @@ export default function NeonGridTemplate({ data, only = null }: NeonGridTemplate
         )}
 
         {/* Projects Section */}
-        {(only === null || only === "projects") &&(
-        <section id="projects" className="section-marker relative px-6 py-32 z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex items-center mb-16">
-              <Code size={28} className="text-fuchsia-400 mr-4" />
-              <h2 className="text-3xl font-bold tracking-tight uppercase">Projects</h2>
-              <div className="ml-4 h-px flex-grow bg-gradient-to-r from-fuchsia-500 to-transparent"></div>
-            </div>
+{(only === null || only === "projects") && (
+  <section id="projects" className="section-marker relative px-6 py-32 z-10">
+    <div className="max-w-6xl mx-auto">
+      <div className="flex items-center mb-16">
+        <Code size={28} className="text-fuchsia-400 mr-4" />
+        <h2 className="text-3xl font-bold tracking-tight uppercase">Projects</h2>
+        <div className="ml-4 h-px flex-grow bg-gradient-to-r from-fuchsia-500 to-transparent"></div>
+      </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-              {data.projects.map((project, index) => (
-                <div
-                  key={index}
-                  className="group relative border border-gray-800 hover:border-fuchsia-500/50 bg-black/80 backdrop-blur-sm p-8 transition-all duration-500"
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {data.projects.map((project, index) => (
+          <div
+            key={index}
+            className="group relative border border-gray-800 hover:border-fuchsia-500/50 bg-black/80 backdrop-blur-sm p-8 transition-all duration-500"
+          >
+            {/* Decorative lines */}
+            <div className="absolute top-0 left-0 w-0 h-1 bg-fuchsia-500 group-hover:w-full transition-all duration-700"></div>
+            <div className="absolute bottom-0 right-0 w-0 h-1 bg-cyan-500 group-hover:w-full transition-all duration-700"></div>
+
+            <h3 className="text-2xl font-semibold mb-4 text-fuchsia-400 group-hover:text-fuchsia-300 transition-colors duration-300">
+              {project.name}
+            </h3>
+
+            <p className="mb-6 text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+              {project.description}
+            </p>
+
+            {/* Reports row (if any) */}
+            {project.reports && project.reports.length > 0 && (
+              <div className="flex flex-wrap gap-3">
+  {project.reports?.map((r, i) => (
+    <a
+      key={i}
+      href={r.href}                   // NOTE: starts with "/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-3 py-1 text-sm border border-cyan-600/40 rounded hover:bg-cyan-900/10"
+    >
+      {r.title}
+    </a>
+  ))}
+</div>
+
+            )}
+
+            {/* Action links */}
+            <div className="flex gap-6 flex-wrap">
+              {project.deployedLink && (
+                <a
+                  href={project.deployedLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 bg-black border border-fuchsia-500/50 hover:border-fuchsia-500 hover:bg-fuchsia-900/20 transition-all duration-300"
                 >
-                  {/* Decorative lines */}
-                  <div className="absolute top-0 left-0 w-0 h-1 bg-fuchsia-500 group-hover:w-full transition-all duration-700"></div>
-                  <div className="absolute bottom-0 right-0 w-0 h-1 bg-cyan-500 group-hover:w-full transition-all duration-700"></div>
+                  <ExternalLink size={16} className="text-fuchsia-400" />
+                  <span className="text-fuchsia-100">Live Demo</span>
+                </a>
+              )}
 
-                  <h3 className="text-2xl font-semibold mb-4 text-fuchsia-400 group-hover:text-fuchsia-300 transition-colors duration-300">
-                    {project.name}
-                  </h3>
-                  <p className="mb-6 text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                    {project.description}
-                  </p>
-                  <div className="flex gap-6">
-                    <a
-                      href={project.deployedLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-black border border-fuchsia-500/50 hover:border-fuchsia-500 hover:bg-fuchsia-900/20 transition-all duration-300"
-                    >
-                      <ExternalLink size={16} className="text-fuchsia-400" />
-                      <span className="text-fuchsia-100">Live Demo</span>
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 bg-black border border-cyan-500/50 hover:border-cyan-500 hover:bg-cyan-900/20 transition-all duration-300"
-                    >
-                      <Github size={16} className="text-cyan-400" />
-                      <span className="text-cyan-100">GitHub</span>
-                    </a>
-                  </div>
-                </div>
-              ))}
+              {project.githubUrl && (
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2 bg-black border border-cyan-500/50 hover:border-cyan-500 hover:bg-cyan-900/20 transition-all duration-300"
+                >
+                  <Github size={16} className="text-cyan-400" />
+                  <span className="text-cyan-100">GitHub</span>
+                </a>
+              )}
             </div>
           </div>
-        </section>
-        )}
+        ))}
+      </div>
+    </div>
+  </section>
+)}
+
 
         {/* Experience Section */}
         {(only === null || only === "skills") && (
