@@ -18,9 +18,10 @@ interface ResumeData {
   projects: {
   name: string
   description: string
-  deployedLink: string
-  githubUrl: string
+  deployedLink?: string
+  githubUrl?: string
   reports?: { title: string; href: string }[]   
+  images?:{src: string; alt?: string}[]
 }[]
 
   skills: {
@@ -381,68 +382,7 @@ export default function NeonGridTemplate({ data, only = null }: NeonGridTemplate
 )}
 
 
-        {/* Experience Section */}
-        {(only === null || only === "skills") && (
-        <section id="experience" className="section-marker relative px-6 py-32 z-10">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex items-center mb-16">
-              <Terminal size={28} className="text-cyan-400 mr-4" />
-              <h2 className="text-3xl font-bold tracking-tight uppercase">Experience</h2>
-              <div className="ml-4 h-px flex-grow bg-gradient-to-r from-cyan-500 to-transparent"></div>
-            </div>
-
-            <div className="relative">
-              {/* Timeline */}
-              <div className="absolute left-0 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-500 via-fuchsia-500 to-cyan-500"></div>
-
-              <div className="space-y-24">
-                {data.experience.map((exp, index) => (
-                  <div key={index} className="relative pl-12">
-                    {/* Timeline node */}
-                    <div className="absolute left-0 top-0 transform -translate-x-1/2 w-6 h-6">
-                      <div className="absolute inset-0 bg-black border-2 border-cyan-500 rotate-45"></div>
-                      <div className="absolute inset-1 bg-black border border-cyan-500 rotate-45"></div>
-                    </div>
-
-                    <div className="group border border-gray-800 hover:border-cyan-500/50 bg-black/80 backdrop-blur-sm p-8 transition-all duration-500">
-                      <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-6">
-                        <div>
-                          <h3 className="text-xl font-semibold text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300">
-                            {exp.position}
-                          </h3>
-                          <h4 className="text-lg text-fuchsia-400 group-hover:text-fuchsia-300 transition-colors duration-300">
-                            {exp.company}
-                          </h4>
-                        </div>
-                        <div className="mt-2 md:mt-0 px-3 py-1 bg-black border border-gray-800 text-gray-400 text-sm tracking-wider">
-                          <span className="text-cyan-400">&gt;</span> {exp.startDate}{" "}
-                          <span className="text-cyan-400">-</span> {exp.endDate}
-                        </div>
-                      </div>
-                      <p className="mb-6 text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                        {exp.description}
-                      </p>
-                      <ul className="space-y-3 text-gray-300">
-                        {exp.bulletPoints.map((point, i) => (
-                          <li key={i} className="flex items-start group/item">
-                            <Zap
-                              size={16}
-                              className="text-cyan-500 mt-1 mr-2 opacity-70 group-hover/item:opacity-100 transition-opacity duration-300"
-                            />
-                            <span className="text-gray-400 group-hover/item:text-gray-200 transition-colors duration-300">
-                              {point}
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-        )}
+        
       </main>
 
       <style jsx global>{`

@@ -15,13 +15,12 @@ const sampleResumeData = {
   },
   projects: [
     {
-      name: "Data Dashboards",
-            reports: [
-      { title: "1. Insights Into Earthquakes Data", href: "https://amishadas.shinyapps.io/quakes-data-insightful-plots/" },
+    name: "Data Dashboards",
+    reports: [
+    { title: "1. Insights Into Earthquakes Data", href: "https://amishadas.shinyapps.io/quakes-data-insightful-plots/" },
     { title: "2. Cool FIFA Facts ", href: "https://public.tableau.com/views/FIFAPROJECT_16769275033780/FIFAReportforFans?:language=en-US&:sid=&:redirect=auth&showOnboarding=true&:display_count=n&:origin=viz_share_link" },
     { title: "3. Employee Attrition Insights", href: "  https://public.tableau.com/views/AttritionProject_16754448584050/AttritionatXYZ?:language=en-US&:sid=&:redirect=auth&showOnboarding=true&:display_count=n&:origin=viz_share_link" },
     { title: "4. Spectroscopy Lab", href: "https://amishadas.shinyapps.io/spectroscopy_lab/" },
-    // { title: "5. Spectroscopy Lab", href: "https://amishadas.shinyapps.io/spectroscopy_lab/" },
   ],
       description: "Data Analysis Dashboards | Tableau, R/RStudio, Shiny",
       deployedLink: "xxxxxxxxxxxxxx",
@@ -33,7 +32,7 @@ const sampleResumeData = {
     { title: "1. As Above So Below: How NASA’s Space Technology Saved Millions of Lives", href: "/reports/RMD/nasa.pdf" },
     { title: "2. Growth on Paper, Loss on the Ground: Crops, Global Warming, and Farmer Incomes", href: "/reports/RMD/wheat.pdf" },
   ],
-      description: "Reports | R/Rstudio, LaTeX",
+      description: "Reports | R/Rstudio/RMD, LaTeX",
       deployedLink: "xxxxxxxxxxxxxx",
       githubUrl: "xxxxxxxxxxxxxx",
     },
