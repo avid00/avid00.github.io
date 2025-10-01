@@ -23,8 +23,8 @@ const sampleResumeData = {
     { title: "4. Spectroscopy Lab", href: "https://amishadas.shinyapps.io/spectroscopy_lab/" },
   ],
       description: "Data Analysis Dashboards | Tableau, R/RStudio, Shiny",
-      deployedLink: "xxxxxxxxxxxxxx",
-      githubUrl: "xxxxxxxxxxxxxx",
+      // deployedLink: "xxxxxxxxxxxxxx",
+      // githubUrl: "xxxxxxxxxxxxxx",
     },
     {
       name: "Data Reports",
@@ -89,21 +89,21 @@ const sampleResumeData = {
       skills: ["XGBoost/Decision Trees","MLP and MC-Dropout","CNN","LLM"],
     },
   ],
-  experience: [
-    {
-      position: "1xxxxxxxxx",
-      company: "xxxxxxxxx",
-      startDate: "xxxxxxxxx",
-      endDate: "xxxxxxxxx",
-      description: "xxxxxxxxx",
-      bulletPoints: [
-        "xxxxxxxxx",
-        "xxxxxxxxx",
-        "xxxxxxxxx",
+  // experience: [
+  //   {
+  //     position: "1xxxxxxxxx",
+  //     company: "xxxxxxxxx",
+  //     startDate: "xxxxxxxxx",
+  //     endDate: "xxxxxxxxx",
+  //     description: "xxxxxxxxx",
+  //     bulletPoints: [
+  //       "xxxxxxxxx",
+  //       "xxxxxxxxx",
+  //       "xxxxxxxxx",
 
-      ],
-    },
-  ],
+  //     ],
+  //   },
+  // ],
 }
 
 export default function Home() {

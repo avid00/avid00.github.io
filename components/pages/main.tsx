@@ -28,14 +28,14 @@ interface ResumeData {
     name: string
     skills: string[]
   }[]
-  experience: {
-    position: string
-    company: string
-    startDate: string
-    endDate: string
-    description: string
-    bulletPoints: string[]
-  }[]
+  // experience?: {
+  //   position: string
+  //   company: string
+  //   startDate: string
+  //   endDate: string
+  //   description: string
+  //   bulletPoints: string[]
+  // }[]
 }
 
 interface NeonGridTemplateProps {
