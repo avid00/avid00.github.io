@@ -325,6 +325,34 @@ export default function NeonGridTemplate({ data, only = null }: NeonGridTemplate
             <h3 className="text-2xl font-semibold mb-4 text-fuchsia-400 group-hover:text-fuchsia-300 transition-colors duration-300">
               {project.name}
             </h3>
+{/* Images (optional) */}
+{project.images && project.images.length > 0 && (
+  <div
+    className={
+      project.images.length === 1
+        ? "mb-6 w-full" // single image full width
+        : "mb-6 grid grid-cols-2 gap-3" // multiple images in grid
+    }
+  >
+    {project.images.map((img, i) => (
+      <div
+        key={i}
+        className={`relative overflow-hidden border border-gray-800 group-hover:border-fuchsia-500/30 transition-colors ${
+          project.images?.length === 1 ? "w-full" : "aspect-video"
+        }`}
+      >
+        <img
+          src={img.src}
+          alt={img.alt ?? `${project.name} image ${i + 1}`}
+          className="w-full h-full object-contain"
+          loading="lazy"
+        />
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-fuchsia-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+      </div>
+    ))}
+  </div>
+)}
+
 
             <p className="mb-6 text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
               {project.description}
@@ -358,7 +386,7 @@ export default function NeonGridTemplate({ data, only = null }: NeonGridTemplate
                   className="flex items-center gap-2 px-4 py-2 bg-black border border-fuchsia-500/50 hover:border-fuchsia-500 hover:bg-fuchsia-900/20 transition-all duration-300"
                 >
                   <ExternalLink size={16} className="text-fuchsia-400" />
-                  <span className="text-fuchsia-100">Live Demo</span>
+                  <span className="text-fuchsia-100">Demo</span>
                 </a>
               )}
 

@@ -23,9 +23,8 @@ const sampleResumeData = {
     { title: "4. Spectroscopy Lab", href: "https://amishadas.shinyapps.io/spectroscopy_lab/" },
   ],
       description: "Data Analysis Dashboards | Tableau, R/RStudio, Shiny",
-      // deployedLink: "xxxxxxxxxxxxxx",
-      // githubUrl: "xxxxxxxxxxxxxx",
     },
+
     {
       name: "Data Reports",
             reports: [
@@ -33,47 +32,49 @@ const sampleResumeData = {
     { title: "2. Growth on Paper, Loss on the Ground: Crops, Global Warming, and Farmer Incomes", href: "/reports/RMD/wheat.pdf" },
   ],
       description: "Reports | R/Rstudio/RMD, LaTeX",
-      deployedLink: "xxxxxxxxxxxxxx",
-      githubUrl: "xxxxxxxxxxxxxx",
     },
-     {
-      name: "Plasmalead",
-      description: "xxxxxxxxxxxxxx",
-      //plasmalead video
-      deployedLink: "xxxxxxxxxxxxxx",
-      githubUrl: "https://github.com/Ishj21/coviguard",
-    },
+
     {
-      name: "Roleplay Chatbot",
-      description: "xxxxxxxxxxxxxx",
-      deployedLink: "xxxxxxxxxxxxxx",
-      githubUrl: "xxxxxxxxxxxxxx",
+      name: "Distributed ETL Streaming Pipeline for Astroinformatics",
+      images: [
+        {src: "/images/etl.png"},
+      ],
+      description: "A production-style streaming ETL pipeline built for astroinformatics. The system ingests survey CSVs via Kafka, processes them with Spark streaming, writes normalized tables to PostgreSQL (with pgAdmin), and exposes interactive analysis via Jupyter — all reproducible with Docker Swarm and a Makefile for quick deployment.",
+      githubUrl: "https://github.com/avid00/Spark-Kafka-PostgreSQL-Jupyter-Streaming-Service-with-Docker-Swarm",
     },
-     {
-      name: "Plasmalead",
-      description: "xxxxxxxxxxxxxx",
-      //plasmalead video
-      deployedLink: "xxxxxxxxxxxxxx",
-      githubUrl: "https://github.com/Ishj21/coviguard",
+
+    {
+      name: "CNN to Classify Galaxies",
+      description: "Convolutional Neural Network (CNN) for classifying galaxy morphologies using the Galaxy10 dataset. The project utilizes TensorFlow for building and training the model and follows standard preprocessing steps to ensure efficient data handling and model performance.",
+      deployedLink: "https://cnnapp-amisha.streamlit.app/%255D%28https:/cnnapp-amisha.streamlit.app/",
+      githubUrl: "https://github.com/avid00/Basic-Galaxy-Morphology-CNN?tab=readme-ov-file",
     },
+    //  {
+    //   name: "Plasmalead",
+    //   description: "xxxxxxxxxxxxxx",
+    //   //plasmalead video
+    //   deployedLink: "xxxxxxxxxxxxxx",
+    //   githubUrl: "https://github.com/Ishj21/coviguard",
+    // },
     {
       name: "Gametrax",
-      description: "xxxxxxxxxxxxxx (add link to thesis)",
-      //demo + thesis
+      description: "Full Stack development of an Android app (built with Flutter/Dart + Firebase + Figma) that helps gamers search, track and organise games, view latest gaming news, and check basic store info — all in one place.",
       reports: [
-    { title: "View Video", href: "/reports/RMD/nasa.pdf" },
+    { title: "Concept Presentation", href: "/gametrax/presentation.pdf" },
+    { title: "Software Requirement Specificatoin (SRS)", href: "/gametrax/report.pdf" },
+  
   ],
-      deployedLink: "xxxxxxxxxxxxxx",
+  images: [
+        {src: "/gametrax/1.png"},
+        {src: "/gametrax/2.png"},
+        {src: "/gametrax/3.png"},
+
+      ],
+      deployedLink: "https://youtu.be/uQ6j9-H9pJU",
       githubUrl: "https://github.com/avid00/Gametrax/tree/second",
     },
     {
       name: "EDHREC to Archidekt Python Script",
-      description: "Converts any EDHREC deck JSON into a clean card list (.txt) for importing into Archidekt (or really any other deck-building platform).",
-      deployedLink: "xxxxxxxxxxxxxx",
-      githubUrl: "https://github.com/avid00/edhrec-to-archidekt/tree/main",
-    },
-     {
-      name: "Master's Thesis:",
       description: "Converts any EDHREC deck JSON into a clean card list (.txt) for importing into Archidekt (or really any other deck-building platform).",
       deployedLink: "xxxxxxxxxxxxxx",
       githubUrl: "https://github.com/avid00/edhrec-to-archidekt/tree/main",
