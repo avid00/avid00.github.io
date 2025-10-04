@@ -46,7 +46,7 @@ const sampleResumeData = {
     {
       name: "CNN to Classify Galaxies",
       description: "Convolutional Neural Network (CNN) for classifying galaxy morphologies using the Galaxy10 dataset. The project utilizes TensorFlow for building and training the model and follows standard preprocessing steps to ensure efficient data handling and model performance.",
-      deployedLink: "https://cnnapp-amisha.streamlit.app/%255D%28https:/cnnapp-amisha.streamlit.app/",
+      deployedLink: "https://cnnapp-amisha.streamlit.app/",
       githubUrl: "https://github.com/avid00/Basic-Galaxy-Morphology-CNN?tab=readme-ov-file",
     },
     //  {
@@ -61,7 +61,7 @@ const sampleResumeData = {
       description: "Full Stack development of an Android app (built with Flutter/Dart + Firebase + Figma) that helps gamers search, track and organise games, view latest gaming news, and check basic store info — all in one place.",
       reports: [
     { title: "Concept Presentation", href: "/gametrax/presentation.pdf" },
-    { title: "Software Requirement Specificatoin (SRS)", href: "/gametrax/report.pdf" },
+    { title: "Software Requirement Specification (SRS)", href: "/gametrax/report.pdf" },
   
   ],
   images: [
@@ -83,7 +83,7 @@ const sampleResumeData = {
   skills: [
     {
       name: "Astroinformatics and Data Science",
-      skills: ["Python", "PyTorch", "Statistics", "SQL, astroquery", "Jupyter Lab", "RStudio/RMD","MongoDB",],
+      skills: ["Python", "PyTorch", "Statistics", "SQL, astroquery", "Jupyter Lab", "RStudio/RMD","MongoDB","Docker","Kafka and Spark","Keras"],
     },
     {
       name: "Machine Learning",

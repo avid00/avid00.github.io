@@ -40,7 +40,7 @@ interface ResumeData {
 
 interface NeonGridTemplateProps {
   data: ResumeData
- only?: "projects" | "skills" | "experience" | null
+ only?: "projects" | "skills" | null
 }
 
 export default function NeonGridTemplate({ data, only = null }: NeonGridTemplateProps) {
@@ -164,7 +164,7 @@ export default function NeonGridTemplate({ data, only = null }: NeonGridTemplate
       {/* Navigation */}
       <nav className="fixed top-32 right-8 z-30 hidden lg:block">
         <ul className="space-y-6">
-          {["header", "skills", "projects", "experience"].map((section) => (
+          {["header", "skills", "projects"].map((section) => (
             <li key={section}>
               <a
                 href={`#${section}`}
