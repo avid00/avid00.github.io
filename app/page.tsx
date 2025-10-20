@@ -14,6 +14,7 @@ const sampleResumeData = {
     resume: "/amisha_resume.pdf"
   },
   projects: [
+   
     {
     name: "Data Dashboards",
     reports: [
@@ -42,6 +43,11 @@ const sampleResumeData = {
       description: "A production-style streaming ETL pipeline built for astroinformatics. The system ingests survey CSVs via Kafka, processes them with Spark streaming, writes normalized tables to PostgreSQL (with pgAdmin), and exposes interactive analysis via Jupyter — all reproducible with Docker Swarm and a Makefile for quick deployment.",
       githubUrl: "https://github.com/avid00/Spark-Kafka-PostgreSQL-Jupyter-Streaming-Service-with-Docker-Swarm",
     },
+       {
+      name: "AWS Cloud-Based Stroke Risk ETL & Analytics Pipeline",
+      description: "A cloud-native end-to-end data engineering project designed to collect, transform, store, and analyze healthcare data related to stroke risk factors using AWS and Python. This project demonstrates how a scalable ETL pipeline can power public-health analytics — identifying trends, patterns, and risk correlations in real-world healthcare data.",
+      githubUrl: "https://https://github.com/avid00/AWS-to-Visualisation-ETL-Pipeline.com/Ishj21/coviguard",
+    },
 
     {
       name: "CNN to Classify Galaxies",
@@ -49,13 +55,7 @@ const sampleResumeData = {
       deployedLink: "https://cnnapp-amisha.streamlit.app/",
       githubUrl: "https://github.com/avid00/Basic-Galaxy-Morphology-CNN?tab=readme-ov-file",
     },
-    //  {
-    //   name: "Plasmalead",
-    //   description: "xxxxxxxxxxxxxx",
-    //   //plasmalead video
-    //   deployedLink: "xxxxxxxxxxxxxx",
-    //   githubUrl: "https://github.com/Ishj21/coviguard",
-    // },
+  
     {
       name: "Gametrax",
       description: "Full Stack development of an Android app (built with Flutter/Dart + Firebase + Figma) that helps gamers search, track and organise games, view latest gaming news, and check basic store info — all in one place.",
@@ -76,7 +76,7 @@ const sampleResumeData = {
     {
       name: "EDHREC to Archidekt Python Script",
       description: "Converts any EDHREC deck JSON into a clean card list (.txt) for importing into Archidekt (or really any other deck-building platform).",
-      deployedLink: "xxxxxxxxxxxxxx",
+      deployedLink: "https://colab.research.google.com/drive/1eFiKciDdrDc_c64unT1zfFqlCh_IRxPL#scrollTo=Nde-QMSoO4Hj",
       githubUrl: "https://github.com/avid00/edhrec-to-archidekt/tree/main",
     },
   ],
@@ -90,21 +90,6 @@ const sampleResumeData = {
       skills: ["XGBoost/Decision Trees","MLP and MC-Dropout","CNN","LLM"],
     },
   ],
-  // experience: [
-  //   {
-  //     position: "1xxxxxxxxx",
-  //     company: "xxxxxxxxx",
-  //     startDate: "xxxxxxxxx",
-  //     endDate: "xxxxxxxxx",
-  //     description: "xxxxxxxxx",
-  //     bulletPoints: [
-  //       "xxxxxxxxx",
-  //       "xxxxxxxxx",
-  //       "xxxxxxxxx",
-
-  //     ],
-  //   },
-  // ],
 }
 
 export default function Home() {
